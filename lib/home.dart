@@ -34,15 +34,29 @@ class _HomeScreenState extends State<HomeScreen> {
           currentIndex: index,
           onTap: (value) {
             index=value;
-            setState(() {
-
-            });
+            setState(() {});
           },
           items: [
-            BottomNavigationBarItem(icon: ImageIcon(AssetImage('assets/images/quran.png')),label: 'quran',backgroundColor: Theme.of(context).primaryColor,),
-            BottomNavigationBarItem(icon: ImageIcon(AssetImage('assets/images/sebha.png')),label: 'sebha',backgroundColor: Theme.of(context).primaryColor,),
-            BottomNavigationBarItem(icon: ImageIcon(AssetImage('assets/images/ahadeth.png')),label: 'ahadeth',backgroundColor: Theme.of(context).primaryColor,),
-            BottomNavigationBarItem(icon: ImageIcon(AssetImage('assets/images/radio.png')),label: 'radio',backgroundColor: Theme.of(context).primaryColor,),
+            BottomNavigationBarItem(
+              icon: ImageIcon(AssetImage('assets/images/quran.png')),
+              label: 'quran',
+              backgroundColor: Theme.of(context).primaryColor,
+            ),
+            BottomNavigationBarItem(
+              icon: ImageIcon(AssetImage('assets/images/sebha.png')),
+              label: 'sebha',
+              backgroundColor: Theme.of(context).primaryColor,
+            ),
+            BottomNavigationBarItem(
+              icon: ImageIcon(AssetImage('assets/images/ahadeth.png')),
+              label: 'ahadeth',
+              backgroundColor: Theme.of(context).primaryColor,
+            ),
+            BottomNavigationBarItem(
+              icon: ImageIcon(AssetImage('assets/images/radio.png')),
+              label: 'radio',
+              backgroundColor: Theme.of(context).primaryColor,
+            ),
           ],
         ),
         body: tabs[index],
