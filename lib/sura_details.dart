@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:islami_c8/Sura_Details_Args.dart';
 
-class Sura_details extends StatefulWidget {
-  static const String routename = 'Sura_details';
+class SuraDetails extends StatefulWidget {
+  static const String routeName = 'SuraDetails';
 
   @override
-  State<Sura_details> createState() => _Sura_detailsState();
+  State<SuraDetails> createState() => _SuraDetailsState();
 }
 
-class _Sura_detailsState extends State<Sura_details> {
+class _SuraDetailsState extends State<SuraDetails> {
   List<String> versus = [];
 
   @override
