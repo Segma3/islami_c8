@@ -20,18 +20,30 @@ class QuranTap extends StatelessWidget {
     return Column(
       children: [
         Image.asset('assets/images/quran_bg.png'),
-        Divider(color: Theme.of(context).primaryColor,thickness: 2,),
-        Center(child: Text('Sura Name',style: Theme.of(context).textTheme.bodyMedium,)),
-        Divider(color: Theme.of(context).primaryColor,thickness: 2,),
+        Divider(
+          color: Theme.of(context).primaryColor,
+          thickness: 2,
+        ),
+        Center(
+            child: Text(
+          'Sura Name',
+          style: Theme.of(context).textTheme.bodyLarge,
+        )),
+        Divider(
+          color: Theme.of(context).primaryColor,
+          thickness: 2,
+        ),
         Expanded(
-          child: ListView.separated(separatorBuilder:(context, index) => Divider(
-    thickness: 2,
-    indent: 20,
-    endIndent: 20,
-    ),
-            itemBuilder: (context,index){
-            return InkWell(onTap: (){
-              Navigator.pushNamed(context, SuraDetails.routeName,
+          child: ListView.separated(
+            separatorBuilder: (context, index) => Divider(
+              thickness: 2,
+              indent: 20,
+              endIndent: 20,
+            ),
+            itemBuilder: (context, index) {
+              return InkWell(
+                onTap: () {
+                  Navigator.pushNamed(context, SuraDetails.routeName,
                       arguments: SuraDetailsArgs(suraNames[index], index));
 
             }

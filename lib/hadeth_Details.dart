@@ -11,7 +11,7 @@ class HadethDetails extends StatelessWidget {
     return Stack(children: [
       SizedBox(
         width: double.infinity,
-        child: Image.asset('assets/images/main_bg.png'),
+        child: Image.asset('assets/images/dark_bg.png'),
       ),
       Scaffold(
           appBar: AppBar(

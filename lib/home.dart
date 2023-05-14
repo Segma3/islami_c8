@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:islami_c8/tabs/Settings.dart';
 import 'package:islami_c8/tabs/ahadeth.dart';
 import 'package:islami_c8/tabs/quran.dart';
 import 'package:islami_c8/tabs/radio.dart';
@@ -13,14 +14,20 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int index = 0;
-  List<Widget> tabs = [QuranTap(),SebhaTap(),AhadethTap(),RadioTap()];
+  List<Widget> tabs = [
+    QuranTap(),
+    SebhaTap(),
+    AhadethTap(),
+    RadioTap(),
+    SettingsTap()
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Stack(children: [
       SizedBox(
           width: double.infinity,
-          child: Image.asset("assets/images/main_bg.png")),
+          child: Image.asset("assets/images/dark_bg.png")),
       Scaffold(
         appBar: AppBar(
           title: Text(
@@ -55,6 +62,11 @@ class _HomeScreenState extends State<HomeScreen> {
             BottomNavigationBarItem(
               icon: ImageIcon(AssetImage('assets/images/radio.png')),
               label: 'radio',
+              backgroundColor: Theme.of(context).primaryColor,
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.settings),
+              label: 'Settings',
               backgroundColor: Theme.of(context).primaryColor,
             ),
           ],
